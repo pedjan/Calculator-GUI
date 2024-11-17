@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            result = new TextBox();
+            show = new TextBox();
             b1 = new Button();
             b2 = new Button();
             b3 = new Button();
@@ -51,27 +51,28 @@
             operacija = new TextBox();
             SuspendLayout();
             // 
-            // result
+            // show
             // 
-            result.Font = new Font("Segoe UI", 35F);
-            result.Location = new Point(12, 32);
-            result.Name = "result";
-            result.ReadOnly = true;
-            result.RightToLeft = RightToLeft.Yes;
-            result.Size = new Size(300, 70);
-            result.TabIndex = 0;
-            result.Text = "0";
+            show.Font = new Font("Segoe UI", 35F);
+            show.Location = new Point(12, 32);
+            show.Name = "show";
+            show.ReadOnly = true;
+            show.RightToLeft = RightToLeft.Yes;
+            show.Size = new Size(300, 70);
+            show.TabIndex = 0;
+            show.Text = "0";
             // 
             // b1
             // 
             b1.Font = new Font("Segoe UI", 15F);
             b1.Location = new Point(29, 348);
+            b1.Margin = new Padding(0);
             b1.Name = "b1";
-            b1.Size = new Size(36, 36);
+            b1.Size = new Size(40, 40);
             b1.TabIndex = 1;
             b1.Text = "1";
             b1.UseVisualStyleBackColor = true;
-            b1.Click += b1_Click;
+            b1.Click += b_Click;
             // 
             // b2
             // 
@@ -82,7 +83,7 @@
             b2.TabIndex = 2;
             b2.Text = "2";
             b2.UseVisualStyleBackColor = true;
-            b2.Click += b2_Click;
+            b2.Click += b_Click;
             // 
             // b3
             // 
@@ -93,7 +94,7 @@
             b3.TabIndex = 3;
             b3.Text = "3";
             b3.UseVisualStyleBackColor = true;
-            b3.Click += b3_Click;
+            b3.Click += b_Click;
             // 
             // b4
             // 
@@ -104,7 +105,7 @@
             b4.TabIndex = 4;
             b4.Text = "4";
             b4.UseVisualStyleBackColor = true;
-            b4.Click += b4_Click;
+            b4.Click += b_Click;
             // 
             // b5
             // 
@@ -115,7 +116,7 @@
             b5.TabIndex = 5;
             b5.Text = "5";
             b5.UseVisualStyleBackColor = true;
-            b5.Click += b5_Click;
+            b5.Click += b_Click;
             // 
             // b6
             // 
@@ -126,7 +127,7 @@
             b6.TabIndex = 6;
             b6.Text = "6";
             b6.UseVisualStyleBackColor = true;
-            b6.Click += b6_Click;
+            b6.Click += b_Click;
             // 
             // b7
             // 
@@ -137,7 +138,7 @@
             b7.TabIndex = 7;
             b7.Text = "7";
             b7.UseVisualStyleBackColor = true;
-            b7.Click += b7_Click;
+            b7.Click += b_Click;
             // 
             // b8
             // 
@@ -148,7 +149,7 @@
             b8.TabIndex = 8;
             b8.Text = "8";
             b8.UseVisualStyleBackColor = true;
-            b8.Click += b8_Click;
+            b8.Click += b_Click;
             // 
             // b9
             // 
@@ -159,7 +160,7 @@
             b9.TabIndex = 9;
             b9.Text = "9";
             b9.UseVisualStyleBackColor = true;
-            b9.Click += b9_Click;
+            b9.Click += b_Click;
             // 
             // b0
             // 
@@ -170,7 +171,7 @@
             b0.TabIndex = 10;
             b0.Text = "0";
             b0.UseVisualStyleBackColor = true;
-            b0.Click += b0_Click;
+            b0.Click += b_Click;
             // 
             // beq
             // 
@@ -192,7 +193,7 @@
             bplus.TabIndex = 12;
             bplus.Text = "+";
             bplus.UseVisualStyleBackColor = true;
-            bplus.Click += bplus_Click;
+            bplus.Click += bope_Click;
             // 
             // bminus
             // 
@@ -203,7 +204,7 @@
             bminus.TabIndex = 13;
             bminus.Text = "-";
             bminus.UseVisualStyleBackColor = true;
-            bminus.Click += bminus_Click;
+            bminus.Click += bope_Click;
             // 
             // bputa
             // 
@@ -214,7 +215,7 @@
             bputa.TabIndex = 14;
             bputa.Text = "*";
             bputa.UseVisualStyleBackColor = true;
-            bputa.Click += bputa_Click;
+            bputa.Click += bope_Click;
             // 
             // bpodeljenjo
             // 
@@ -225,7 +226,7 @@
             bpodeljenjo.TabIndex = 15;
             bpodeljenjo.Text = "/";
             bpodeljenjo.UseVisualStyleBackColor = true;
-            bpodeljenjo.Click += bpodeljenjo_Click;
+            bpodeljenjo.Click += bope_Click;
             // 
             // bclear
             // 
@@ -280,6 +281,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(324, 446);
             Controls.Add(operacija);
             Controls.Add(drugi);
@@ -301,7 +304,7 @@
             Controls.Add(b3);
             Controls.Add(b2);
             Controls.Add(b1);
-            Controls.Add(result);
+            Controls.Add(show);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MinimumSize = new Size(340, 485);
             Name = "Form1";
@@ -313,7 +316,7 @@
 
         #endregion
 
-        private TextBox result;
+        private TextBox show;
         private Button b1;
         private Button b2;
         private Button b3;
